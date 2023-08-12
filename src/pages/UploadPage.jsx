@@ -3,6 +3,7 @@ import Card from "../components/Card"
 import Footer from '../components/Footer'
 import { getAnimeByImage } from '../api'
 import { useState, useRef } from 'react'
+import About from "../components/About"
 
 const UploadPage = () => {
   const [animes, setAnimes] = useState([])
@@ -42,7 +43,7 @@ const UploadPage = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="w-50 mx-auto d-flex justify-content-center flex-column h-screen">
+      <div className="w-page mx-auto d-flex justify-content-center flex-column h-screen">
         <h3 className="text-center">Upload Image</h3>
         <label htmlFor="image">Image</label>
         <input type="file" className="form-control mb-2" accept='image/*' name="image" id="image" onChange={handleImage} />
@@ -54,6 +55,7 @@ const UploadPage = () => {
           <Card data={animes}></Card>
         </div>
       </div>
+      <About two="Select the anime image that will be searched through your file"></About>
       <Footer></Footer>
     </>
   )
