@@ -47,7 +47,7 @@ const UploadPage = () => {
         <h3 className="text-center">Upload Image</h3>
         <label htmlFor="image">Image</label>
         <input type="file" className="form-control mb-2" accept='image/*' name="image" id="image" onChange={handleImage} />
-        {imagePreview && <img src={imagePreview} alt="Preview" className='h-25 mx-auto' />}
+        {imagePreview && <img src={imagePreview} alt="Preview" className='h-25 mx-auto w-100 object-fit-cover' />}
         <button onClick={() => handleGetByImage(cardRef.current)} className="btn btn-primary mt-2">Submit</button>
       </div>
       <div className="container" ref={cardRef}>
